@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace employeeManager.Domain
 {
-    class interface IDepartmentDataSoure
+    public interface IDepartmentDataSoure
     {
         IQueryable<Employee> Employees { get; }
         IQueryable<Department> Departments { get; }

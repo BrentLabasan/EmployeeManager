@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using employeeManager.Domain;
+using employeeManager.Web.Infrastructure;
 
 namespace employeeManager.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IDepartmentDataSoure _db;
+
+        public HomeController(IDepartmentDataSoure db)
+        {
+            _db = db;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var allDepartments = _db.Departments;
+
+            return View(allDepartments);
         }
 
         public ActionResult About()
