@@ -10,9 +10,9 @@ namespace employeeManager.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IDepartmentDataSoure _db;
+        private IDepartmentDataSource _db;
 
-        public HomeController(IDepartmentDataSoure db)
+        public HomeController(IDepartmentDataSource db)
         {
             _db = db;
         }

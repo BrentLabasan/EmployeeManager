@@ -12,7 +12,7 @@ namespace employeeManager.Web {
                                         scan.TheCallingAssembly();
                                         scan.WithDefaultConventions();
                                     });
-                            x.For<IDepartmentDataSoure>().HttpContextScoped().Use<DepartmentDB>();
+                            x.For<IDepartmentDataSource>().HttpContextScoped().Use<DepartmentDB>();
                         });
             return ObjectFactory.Container;
         }

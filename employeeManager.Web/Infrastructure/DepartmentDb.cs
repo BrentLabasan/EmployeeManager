@@ -9,12 +9,12 @@ using employeeManager.Domain;
 namespace employeeManager.Web.Infrastructure
 {
 
-    public class DepartmentDB : DbContext, IDepartmentDataSoure
+    public class DepartmentDB : DbContext, IDepartmentDataSource
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
 
-        IQueryable<Employee> IDepartmentDataSoure.Employees
+        IQueryable<Employee> IDepartmentDataSource.Employees
         {
             get
             {
@@ -22,7 +22,7 @@ namespace employeeManager.Web.Infrastructure
             }
         }
 
-        IQueryable<Department> IDepartmentDataSoure.Departments
+        IQueryable<Department> IDepartmentDataSource.Departments
         {
             get
             {
